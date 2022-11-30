@@ -1,0 +1,100 @@
+<h1 mat-dialog-title>Add Concourses Form</h1>
+<div mat-dialog-content>
+  <mat-form-field appearance="outline">
+    <mat-label>Concourse Id</mat-label>
+    <input matInput placeholder="Id">
+  </mat-form-field>
+  <mat-form-field appearance="outline">
+    <mat-label>Message Id</mat-label>
+    <input matInput placeholder="Id">
+  </mat-form-field>
+  <mat-form-field appearance="outline">
+    <mat-label>Departures</mat-label>
+    <input matInput placeholder="Platform No">
+  </mat-form-field>
+  <form>
+    <mat-label for="frt-time">First Row Time </mat-label>
+    <input id="frt-time" type="time" name="frt-time" step="2" style="width: 100%;"/>
+  </form>
+  &nbsp;
+  <form>
+    <mat-label for="frtC-time">First Row Time C</mat-label>
+    <input id="frtC-time" type="time" name="frtC-time" style="width: 100%;"/>
+  </form>
+  &nbsp;
+  <mat-form-field appearance="outline">
+    <mat-label>Ftt Destination Number</mat-label>
+    <input matInput placeholder="fttdestinationnumber">
+  </mat-form-field>
+  <mat-form-field appearance="outline">
+    <mat-label>Ftt Destination Name</mat-label>
+    <input matInput placeholder="fttdestinatinationname">
+  </mat-form-field>
+  <mat-form-field appearance="outline">
+    <mat-label>Ftt Platform No</mat-label>
+    <input matInput placeholder="fttplatformno">
+  </mat-form-field>
+  <form>
+    <mat-label for="srt-time">Second Row Time </mat-label>
+    <input id="srt-time" type="time" name="srt-time" step="2" style="width: 100%;"/>
+  </form>
+  &nbsp;
+  <form>
+    <mat-label for="srtC-time">Second Row Time C</mat-label>
+    <input id="srtC-time" type="time" name="srtC-time" style="width: 100%;"/>
+  </form>
+  &nbsp;
+  <mat-form-field appearance="outline">
+    <mat-label>Stt Destination No</mat-label>
+    <input matInput placeholder="sttdestinationnumber">
+  </mat-form-field>
+  <mat-form-field appearance="outline">
+    <mat-label>Stt Destination Name</mat-label>
+    <input matInput placeholder="sttdestinationname">
+  </mat-form-field>
+  <mat-form-field appearance="outline">
+    <mat-label>Stt Platform No</mat-label>
+    <input matInput placeholder="sttplatformno">
+  </mat-form-field>
+  <form>
+    <mat-label for="trt-time">Third Row Time </mat-label>
+    <input id="trt-time" type="time" name="trt-time" step="2" style="width: 100%;"/>
+  </form>
+  &nbsp;
+  <form>
+    <mat-label for="trtC-time">Third Row Time C</mat-label>
+    <input id="trtC-time" type="time" name="trtC-time" style="width: 100%;"/>
+  </form>
+  &nbsp;
+  <mat-form-field appearance="outline">
+    <mat-label>Ttt Destination No</mat-label>
+    <input matInput placeholder="tttdestinationnumber">
+  </mat-form-field>
+  <mat-form-field appearance="outline">
+    <mat-label>Ttt Platform No</mat-label>
+    <input matInput placeholder="tttplatformnumber">
+  </mat-form-field>
+  <mat-form-field appearance="outline">
+    <mat-label>Ttt Destination Name</mat-label>
+    <input matInput placeholder="tttdestinationname">
+  </mat-form-field>
+  <form>
+    <mat-label for="rdt-time">Record Date Time</mat-label>
+    <br>
+    <input id="rdt-date" type="date" name="rdt-date" style="width: 50%;"/>
+    <input id="rdt-time" type="time" name="rdt-time" step="2" style="width: 50%;"/>
+  </form>
+  &nbsp;
+  <mat-form-field appearance="outline">
+    <mat-label>Flip Language</mat-label>
+    <input matInput placeholder="FlipLanguage">
+  </mat-form-field>
+  <mat-form-field appearance="outline">
+    <mat-label>Flip Language 2</mat-label>
+    <input matInput placeholder="FlipLanguage2">
+  </mat-form-field>
+</div>
+<div mat-dialog-action [align]="'end'">
+  <button mat-raised-button color="warn" mat-dialog-close>Close</button>
+  <button mat-raised-button color="primary" style="margin-left: 8px;">Save</button>
+</div>
