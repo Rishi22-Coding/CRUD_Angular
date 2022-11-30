@@ -1,0 +1,56 @@
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Id</th>
+      <th scope="col">messageid</th>
+      <th scope="col">stationidenficationcode</th>
+      <th scope="col">stationname</th>
+      <th scope="col">Departures</th>
+      <th scope="col">FirstRowTime</th>
+      <th scope="col">FirstRowTimeC</th>
+      <th scope="col">fttdestinationnumber</th>
+      <th scope="col">fttdestinatinationname</th>
+      <th scope="col">fttplatformno</th>
+      <th scope="col">SecRowTime</th>
+      <th scope="col">SecRowTimeC</th>
+      <th scope="col">sttdestinationnumber</th>
+      <th scope="col">sttdestinationname</th>
+      <th scope="col">sttplatformno</th>
+      <th scope="col">ThirRowTime</th>
+      <th scope="col">ThirRowTimeC</th>
+      <th scope="col">tttdestinationnumber</th>
+      <th scope="col">tttplatformnumber</th>
+      <th scope="col">tttdestinationname</th>
+      <th scope="col">RecDatetime</th>
+      <th scope="col">FlipLanguage</th>
+      <th scope="col">FlipLanguage2</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let dt of concourseData">
+      <td>{{dt.Id}}</td>
+      <td>{{dt.messageid}}</td>
+      <td>{{dt.stationidenficationcode}}</td>
+      <td>{{dt.stationname}}</td>
+      <td>{{dt.Departures}}</td>
+      <td>{{dt.FirstRowTime}}</td>
+      <td>{{dt.FirstRowTimeC}}</td>
+      <td>{{dt.fttdestinationnumber}}</td>
+      <td>{{dt.fttdestinatinationname}}</td>
+      <td>{{dt.fttplatformno}}</td>
+      <td>{{dt.SecRowTime}}</td>
+      <td>{{dt.SecRowTimeC}}</td>
+      <td>{{dt.sttdestinationnumber}}</td>
+      <td>{{dt.sttdestinationname}}</td>
+      <td>{{dt.sttplatformno}}</td>
+      <td>{{dt.ThirRowTime}}</td>
+      <td>{{dt.ThirRowTimeC}}</td>
+      <td>{{dt.tttdestinationnumber}}</td>
+      <td>{{dt.tttplatformnumber}}</td>
+      <td>{{dt.tttdestinationname}}</td>
+      <td>{{dt.RecDatetime}}</td>
+      <td>{{dt.FlipLanguage}}</td>
+      <td>{{dt.FlipLanguage2}}</td>
+    </tr>
+  </tbody>
+</table>
