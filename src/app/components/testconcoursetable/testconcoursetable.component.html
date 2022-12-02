@@ -1,0 +1,149 @@
+<div class="containerTable">
+  <div style="margin-top: 10px;">
+    <mat-form-field>
+      <mat-label>Filter</mat-label>
+      <input matInput (keyup)="applyFilter($event)" placeholder="Ex. Mia" #input>
+    </mat-form-field>
+
+    <div class="mat-elevation-z8">
+      <table mat-table [dataSource]="dataSource" matSort>
+
+        <ng-container matColumnDef="Id">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header> ID </th>
+          <td mat-cell *matCellDef="let row"> {{row.Id}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="messageid">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header> messageid </th>
+          <td mat-cell *matCellDef="let row"> {{row.messageid}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="stationidenficationcode">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header> stationidenficationcode </th>
+          <td mat-cell *matCellDef="let row"> {{row.stationidenficationcode}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="stationname">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header> stationname </th>
+          <td mat-cell *matCellDef="let row"> {{row.stationname}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="Departures">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header> Departures </th>
+          <td mat-cell *matCellDef="let row"> {{row.Departures}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="FirstRowTime">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header> FirstRowTime </th>
+          <td mat-cell *matCellDef="let row"> {{row.FirstRowTime}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="FirstRowTimeC">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header> FirstRowTimeC </th>
+          <td mat-cell *matCellDef="let row"> {{row.FirstRowTimeC}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="fttdestinationnumber">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header> fttdestinationnumber </th>
+          <td mat-cell *matCellDef="let row"> {{row.fttdestinationnumber}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="fttdestinatinationname">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header> fttdestinatinationname </th>
+          <td mat-cell *matCellDef="let row"> {{row.fttdestinatinationname}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="fttplatformno">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header> fttplatformno </th>
+          <td mat-cell *matCellDef="let row"> {{row.fttplatformno}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="SecRowTime">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header> SecRowTime </th>
+          <td mat-cell *matCellDef="let row"> {{row.SecRowTime}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="SecRowTimeC">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header> SecRowTimeC </th>
+          <td mat-cell *matCellDef="let row"> {{row.SecRowTimeC}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="sttdestinationnumber">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header> sttdestinationnumber </th>
+          <td mat-cell *matCellDef="let row"> {{row.sttdestinationnumber}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="sttdestinationname">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header> sttdestinationname </th>
+          <td mat-cell *matCellDef="let row"> {{row.sttdestinationname}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="sttplatformno">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header> sttplatformno </th>
+          <td mat-cell *matCellDef="let row"> {{row.sttplatformno}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="ThirRowTime">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header> ThirRowTime </th>
+          <td mat-cell *matCellDef="let row"> {{row.ThirRowTime}} </td>
+        </ng-container>
+        <ng-container matColumnDef="ThirRowTimeC">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header> ThirRowTimeC </th>
+          <td mat-cell *matCellDef="let row"> {{row.ThirRowTimeC}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="tttdestinationnumber">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header> tttdestinationnumber </th>
+          <td mat-cell *matCellDef="let row"> {{row.tttdestinationnumber}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="tttplatformnumber">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header> tttplatformnumber </th>
+          <td mat-cell *matCellDef="let row"> {{row.tttplatformnumber}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="tttdestinationname">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header> tttdestinationname </th>
+          <td mat-cell *matCellDef="let row"> {{row.tttdestinationname}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="RecDatetime">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header> RecDatetime </th>
+          <td mat-cell *matCellDef="let row"> {{row.RecDatetime}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="FlipLanguage">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header> FlipLanguage </th>
+          <td mat-cell *matCellDef="let row"> {{row.FlipLanguage}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="FlipLanguage2">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header> FlipLanguage2 </th>
+          <td mat-cell *matCellDef="let row"> {{row.FlipLanguage2}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="actions">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header> Actions </th>
+          <td mat-cell *matCellDef="let row">
+            <button mat-icon-button (click)="editConcourse(row)" color="primary">
+              <mat-icon>edit</mat-icon>
+            </button>
+            <button mat-icon-button color="warn">
+              <mat-icon>delete</mat-icon>
+            </button>
+          </td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+
+        <!-- Row shown when there is no matching data. -->
+        <tr class="mat-row" *matNoDataRow>
+          <td class="mat-cell" colspan="4">No data matching the filter "{{input.value}}"</td>
+        </tr>
+      </table>
+
+      <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]" aria-label="Select page of users"></mat-paginator>
+    </div>
+  </div>
+</div>
