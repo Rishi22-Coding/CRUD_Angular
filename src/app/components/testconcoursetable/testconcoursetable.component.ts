@@ -52,6 +52,17 @@ export class TestconcoursetableComponent implements OnInit {
       data: row
     });
   }
+  deleteConcourse(id: any){
+    this.testApi.deleteConcourse(id)
+    .subscribe({
+      next:(res)=>{
+        alert("Concourse Deleted Successfully");
+      },
+      error:()=>{
+        alert("Error while Deleting the Concourse");
+      }
+    })
+  }
   applyFilter(event: Event) {
     const filterValue = (event.target as HTMLInputElement).value;
     this.dataSource.filter = filterValue.trim().toLowerCase();
